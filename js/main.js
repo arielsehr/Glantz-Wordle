@@ -36,8 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
       let checkdouble = currentWordArr.join();
 
       const isDoubledUp = checkdouble.includes(letter);
+      console.log(isDoubleUp);
 
-      if (!isDoubledUp) {
+      if (isDoubledUp) {
         return "white";
       }
   
