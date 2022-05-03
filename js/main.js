@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const isDoubledUp = checkdouble.includes(letter);
 
-      if (isDoubledUp) {
+      if (!isDoubledUp) {
         return "white";
       }
   
