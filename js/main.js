@@ -35,12 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const currentWordArr = getCurrentWordArr();
       let checkdouble = currentWordArr.join();
 
-      console.log(checkdouble);
-
       const isDoubledUp = checkdouble.includes(letter);
 
       if (isDoubledUp) {
-        return "rgb(58, 58, 60)";
+        return "white)";
       }
   
       if (!isCorrectLetter) {
