@@ -36,14 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
       let checkdouble = currentWordArr.join();
 
       const isDoubledUp = checkdouble.includes(letter);
+
+      if (isDoubledUp) {
+        return "rgb(58, 58, 60)";
+      }
   
       if (!isCorrectLetter) {
         return "rgb(58, 58, 60)";
       }
 
-      if (isDoubledUp) {
-        return "rgb(58, 58, 60)";
-      }
+
   
       const letterInThatPosition = word.charAt(index);
       const isCorrectPosition = letter === letterInThatPosition;
