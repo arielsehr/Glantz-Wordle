@@ -33,14 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
     function getTileColor(letter, index) {
       const isCorrectLetter = word.includes(letter);
       const currentWordArr = getCurrentWordArr();
-      let checkdouble = currentWordArr.join();
+      // let checkdouble = currentWordArr.join();
 
-      const isDoubledUp = checkdouble.includes(letter);
-      console.log(isDoubleUp);
+      // const isDoubledUp = checkdouble.includes(letter);
+      // console.log(isDoubleUp);
 
-      if (isDoubledUp) {
-        return "white";
-      }
+      // if (isDoubledUp) {
+      //   return "white";
+      // }
   
       if (!isCorrectLetter) {
         return "rgb(58, 58, 60)";
