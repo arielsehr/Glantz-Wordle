@@ -38,14 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const isDoubledUp = checkdouble.includes(letter);
 
       if (isDoubledUp) {
-        return "white)";
+        return "white";
       }
   
       if (!isCorrectLetter) {
         return "rgb(58, 58, 60)";
       }
-
-
   
       const letterInThatPosition = word.charAt(index);
       const isCorrectPosition = letter === letterInThatPosition;
