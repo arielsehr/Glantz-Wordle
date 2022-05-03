@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (isDoubledUp) {
-        return "white";
+        return "rgb(55, 55, 60)";
       }
   
       const letterInThatPosition = word.charAt(index);
