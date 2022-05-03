@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     function getTileColor(letter, index) {
       const isCorrectLetter = word.includes(letter);
-
+      const currentWordArr = getCurrentWordArr();
       let checkdouble = currentWordArr.join();
 
       console.log(checkdouble);
