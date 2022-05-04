@@ -116,6 +116,11 @@ header {
     margin-bottom: 100px;
   }
 
+  #board-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   #keyboard-container {
     height: 150px;
     background-color: black;
@@ -126,7 +131,9 @@ header {
   }
 
   .square {
-    flex-grow: 0.25;
+    flex-grow: 0.50;
+    min-width: 45px;
+    min-height: 45px;
   }
 
   .keyboard-row button.wide-button {
