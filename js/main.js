@@ -26,22 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
         availableSpace = availableSpace + 1;
         availableSpaceEl.textContent = letter;
 
-        console.log(currentWordArr);
       }
     }
   
-    function getTileColor(letter, index) {
+    function getTileColor(letter, index, currentWord) {
       const isCorrectLetter = word.includes(letter);
-      const currentWordArr = getCurrentWordArr();
-      // let checkdouble = currentWordArr.join();
 
-      // const isDoubledUp = checkdouble.includes(letter);
-      // console.log(isDoubleUp);
+      checkDouble = currentWord.slice(0, index);
 
-      // if (isDoubledUp) {
-      //   return "white";
-      // }
-  
+      const isDoubled = checkDouble.includes(letter);
+
+      if (isDoubled) {
+        return "rgb(58, 58, 60)";
+      }
+
       if (!isCorrectLetter) {
         return "rgb(58, 58, 60)";
       }
@@ -69,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         method: "GET",
         headers: {
           "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-          "x-rapidapi-key": '37de72842fmsh221a2c2a663db58p18cdb7jsne7b1aafac6d3',
+          "x-rapidapi-key": 'd9eb03b950mshd12f854b4a6b539p11a05fjsn076f36110ed1',
         },
       })
         .then((res) => {
@@ -81,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
           const interval = 200;
           currentWordArr.forEach((letter, index) => {
             setTimeout(() => {
-              const tileColor = getTileColor(letter, index);
+              const tileColor = getTileColor(letter, index, currentWord);
   
               const letterId = firstLetterId + index;
               const letterEl = document.getElementById(letterId);
